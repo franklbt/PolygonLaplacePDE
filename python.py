@@ -28,8 +28,8 @@ def main():
     for i in range(n):
         for j in range((i)*N1,(i+1)*N1):
             if i%4 == 0 :
-                u[N1,j] = math.sin(j*math.pi/(N2+1))
-            elif i%4 == 2 : u[N1,j] = - math.sin(j*math.pi/(N2+1))
+                u[N1,j] = math.sin(j*math.pi/(N1+1))
+            elif i%4 == 2 : u[N1,j] = - math.sin(j*math.pi/(N1+1))
             else :u[N1,j] = 0
 
     # Show the initial conditions.
