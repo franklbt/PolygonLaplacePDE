@@ -15,10 +15,6 @@ N1 = 10
 N2 = n*N1
 EPS = 1.e-4
 
-def analytic(x, y):
-    return math.sinh(math.pi*(x-0.5))*math.sin(math.pi*y)/math.sinh(math.pi/2)
-
-
 
 def main():
 
@@ -82,13 +78,13 @@ def main():
 
         dumax = np.max(np.fabs(u-uold))
 
-	    #----------------------------------------------
+	#----------------------------------------------
         # Show the current iterate.
         
         plt.contourf(X,Y, [[u[r][theta] for r in range(N1)] for theta in range(N2+1)])
         plt.title('Jacobi convergence: iteration '+str(n_iter))
         plt.pause(0.05)
-	    #----------------------------------------------
+	#----------------------------------------------
 
     print( n_iter, 'iterations')
     plt.show()
